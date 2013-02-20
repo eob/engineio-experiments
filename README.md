@@ -34,7 +34,25 @@ For example, on linux or mac, type this:
 
 On windows, create shortcuts.
 
-5. Try running the example server
+5. Quick Check
+--------------
+
+Your filesystem should now look like this:
+
+    socket
+      |+ engine.io/
+      |+ engine.io-client/
+      |+ socket.io/
+      |+ socket.io-client/
+      |~ experiment
+          |- index.html
+          |- app.js
+          |+ engine.io/ [SYMLINK]
+          |+ engine.io-client/ [SYMLINK]
+          |+ socket.io/ [SYMLINK]
+          |+ socket.io-client/ [SYMLINK]
+
+6. Try running the example server
 ---------------------------------
 
     cd experiments
