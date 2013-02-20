@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <script src="engine.io-client/engine.io.js"></script>
+    <script>
+
+      var socket = new eio.Socket('ws://localhost/');
+
+      var dataReceived = function(data) {
+        console.log(data);
+      }
+
+      var socketClosed = function() {
+        console.log("Socket closed.");
+      }
+
+      socket.on('open', function () {
+        socket.on('message', dataReceived);
+        socket.on('close', socketClosed);
+      });
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
